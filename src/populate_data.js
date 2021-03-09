@@ -48,7 +48,7 @@ async function run() {
 
     console.log("=========== Inserted all posts successfully ===========");
 
-    let commentsQueries = Array(20)
+    let commentsQueries = Array(38)
       .fill("")
       .map(async (_, index) => {
         return client.query(

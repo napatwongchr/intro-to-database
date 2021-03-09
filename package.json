@@ -1,0 +1,24 @@
+{
+  "name": "intro-to-database",
+  "version": "1.0.0",
+  "description": "- [Databases](https://github.com/napatwongchr/intro-to-database/blob/main/lessons/database.md)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/napatwongchr/intro-to-database.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/napatwongchr/intro-to-database/issues"
+  },
+  "homepage": "https://github.com/napatwongchr/intro-to-database#readme",
+  "dependencies": {
+    "faker": "^5.4.0",
+    "pg": "^8.5.1"
+  }
+}
