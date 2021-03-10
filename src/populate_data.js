@@ -10,6 +10,7 @@ async function run() {
   const client = await pool.connect();
   const USERS_RECORD_NUMBER = 5;
   const POSTS_RECORD_NUMBER = 20;
+  const COMMENTS_RECORD_NUMBER = 200000;
 
   try {
     let userQueries = Array(USERS_RECORD_NUMBER)
@@ -48,7 +49,7 @@ async function run() {
 
     console.log("=========== Inserted all posts successfully ===========");
 
-    let commentsQueries = Array(38)
+    let commentsQueries = Array(COMMENTS_RECORD_NUMBER)
       .fill("")
       .map(async (_, index) => {
         return client.query(
