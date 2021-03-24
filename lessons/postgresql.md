@@ -59,7 +59,7 @@ App ที่เราจะทำคือ Blog App สิ่งที่ App �
 - **ให้เราลองสังเกตว่าใน requirements มีอะไรบ้าง ?** requirement ของเราประกอบไปด้วย **users, posts, comments** ซึ่งสามอย่างนี้คือ tables ของเรา
 
 - **จากนั้นให้ดูต่อว่า schema ของแต่ละ table จะเป็นยังไง ?**
-  - ตาราง users จะเก็บข้อมูล user_id, email, firstname, lastname, last_login, created_on
+  - ตาราง users จะเก็บข้อมูล user_id, email, firstname, lastname, created_on, last_logged_in
   - ตาราง posts จะเก็บข้อมูล post_id, user_id, content, created_on, updated_on
   - ตาราง comments จะเก็บข้อมูล comment_id, user_id, post_id, content, created_on, updated_on
 
@@ -72,7 +72,8 @@ CREATE TABLE users (
   email VARCHAR ( 50 ) UNIQUE NOT NULL,
   firstname VARCHAR ( 100 ) NOT NULL,
   lastname VARCHAR ( 100 ) NOT NULL,
-  created_on TIMESTAMP NOT NULL
+  created_on TIMESTAMP NOT NULL,
+  last_logged_in TIMESTAMP NOT NULL
 );
 ```
 
@@ -90,7 +91,7 @@ CREATE TABLE users (
 ## Create Record
 
 ```sql
-INSERT INTO users (username, email, firstname, lastname, created_on) VALUES ('knotnapat', 'knot@testmail.com', 'knot', 'napat', NOW());
+INSERT INTO users (username, email, firstname, lastname, created_on, last_logged_in) VALUES ('knotnapat', 'knot@testmail.com', 'knot', 'napat', NOW(), NOW());
 ```
 
 <br><hr><br>

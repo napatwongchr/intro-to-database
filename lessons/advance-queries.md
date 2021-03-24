@@ -129,9 +129,9 @@ ON posts.user_id = users.user_id;
 เราสามารถเขียน query statement ลงไปใน query ได้ (queryception 😯)
 
 ```sql
-SELECT comment_id, user_id, LEFT(comment, 20)
+SELECT comment_id, user_id, LEFT(comment, 20) AS post_comment
 FROM comments
-WHERE user_id = (SELECT user_id FROM users WHERE firstname = '??');
+WHERE user_id = (SELECT user_id FROM users WHERE firstname = 'Elton');
 ```
 
 <br><hr><br>
