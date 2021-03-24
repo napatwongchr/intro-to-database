@@ -8,7 +8,9 @@
 
 `docker exec -it -u postgres my-postgres psql`
 
-🌟 ถ้าใครมีปัญหาในการ install docker ให้ [download postgresql โดยตรงจากที่นี่](https://www.postgresql.org/download/)
+🌟 ถ้าใครมีปัญหาในการ install docker ให้[ทำตามขั้นตอนจาก link นี้](https://www.postgresqltutorial.com/install-postgresql/)
+
+[Postgresql download link ](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
 
 <br><hr><br>
 
@@ -88,7 +90,7 @@ CREATE TABLE users (
 ## Create Record
 
 ```sql
-INSERT INTO users (username, email, firstname, lastname, created_on) VALUES ('knotnapt', 'knot@testmail.com', 'knot', 'napat', NOW());
+INSERT INTO users (username, email, firstname, lastname, created_on) VALUES ('knotnapat', 'knot@testmail.com', 'knot', 'napat', NOW());
 ```
 
 <br><hr><br>

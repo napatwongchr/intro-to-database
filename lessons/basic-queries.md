@@ -105,9 +105,23 @@ ORDER BY created_on ASC;
 
 ## COUNT
 
+COUNT เป็นคำสั่งที่นับว่าเรามี Records กี่ตัวใน Table
+
+```sql
+SELECT COUNT(*) FROM posts;
+```
+
+🌟 Count จะไม่นับค่า null
+
 <br><hr><br>
 
 ## UPDATE
+
+เราสามารถ Update ข้อมูลได้ตามคำสั่งนี้
+
+```sql
+UPDATE posts SET content='Updated content' WHERE post_id = 2 RETURNING *;
+```
 
 <br><hr><br>
 
