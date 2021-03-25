@@ -38,7 +38,7 @@ and orders.status = 'pending'
 limit 5;
 ```
 
-4. อยากได้ข้อมูล 5 orders ล่าสุดของ customer ที่ชื่อ 'Shellie' ที่มี status เป็น 'paid'
+4. อยากได้ข้อมูล 5 orders ล่าสุดของ customer ที่ชื่อ 'Maia' ที่มี status เป็น 'paid'
 
 เราจะ select ข้อมูลจากตาราง orders และ join ข้อมูลจากตาราง customers เพราะว่าเราอยากจะ where ด้วย customers's firstname เนื่องจากว่าในตาราง orders ไม่รู้ customers's firstname
 
