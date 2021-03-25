@@ -26,6 +26,10 @@ CREATE TABLE products (
   price INTEGER NOT NULL,
   category_id INTEGER NOT NULL,
   stock_number INTEGER NOT NULL,
+<<<<<<< HEAD
+=======
+  category_id INTEGER NOT NULL,
+>>>>>>> f0eee1275807aa92f5de114167d3f58829d31716
   created_on TIMESTAMP NOT NULL,
   updated_on TIMESTAMP NOT NULL
 );
@@ -67,7 +71,11 @@ CREATE TABLE order_items (
   order_id INTEGER NOT NULL,
   product_id INTEGER NOT NULL,
   quantity INTEGER NOT NULL,
+<<<<<<< HEAD
   created_on TIMESTAMP NOT NULL
+=======
+  created_on TIMESTAMP NOT NULL,
+>>>>>>> f0eee1275807aa92f5de114167d3f58829d31716
 );
 
 
@@ -120,8 +128,11 @@ INSERT INTO "users" (email,password,created_on,updated_on,last_logged_in) VALUES
 INSERT INTO "users" (email,password,created_on,updated_on,last_logged_in) VALUES ('eu@metus.ca','YEF32WSW8YR','2022-01-16 16:30:10','2020-12-08 12:13:20','2021-11-21 08:54:50');
 INSERT INTO "users" (email,password,created_on,updated_on,last_logged_in) VALUES ('lobortis@fermentum.edu','FHI69NGW0WC','2022-03-04 04:11:44','2021-05-03 18:47:17','2021-07-02 00:07:33');
 INSERT INTO "users" (email,password,created_on,updated_on,last_logged_in) VALUES ('volutpat@duinec.net','BWL80OQE7CJ','2020-12-14 09:40:18','2022-03-16 11:35:39','2021-08-07 01:13:37');
+<<<<<<< HEAD
 INSERT INTO "users" (email,password,created_on,updated_on,last_logged_in) VALUES ('js@world.edu','IXI69ZGW0AC','2022-03-04 04:11:44','2021-05-03 18:47:17','2021-07-02 00:07:33');
 INSERT INTO "users" (email,password,created_on,updated_on,last_logged_in) VALUES ('ama@zir.net','TSL156KZ7cx','2020-12-14 09:40:18','2022-03-16 11:35:39','2021-08-07 01:13:37');
+=======
+>>>>>>> f0eee1275807aa92f5de114167d3f58829d31716
 
 -- customers data
 INSERT INTO "customers" (user_id,phone_number,firstname,lastname) VALUES (39,'002-606-2002','Kylan','Johnston');
@@ -496,103 +507,103 @@ INSERT INTO "categories" (name,description,created_on,updated_on) VALUES ('beaut
 
 
 -- products data
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('non',79525,3,9236,1,'2021-09-15 09:42:12','2022-01-27 08:35:58');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('mauris',94611,1,3561,2,'2021-02-22 02:37:53','2020-10-20 09:43:24');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('placerat.',49833,6,9532,2,'2021-07-18 09:32:53','2021-09-17 21:24:45');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('facilisis,',39564,7,4710,3,'2020-04-16 01:25:28','2021-01-02 05:35:49');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('sociis',11059,10,341,7,'2021-12-04 04:54:12','2022-03-19 14:26:00');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('egestas.',33817,8,3640,4,'2022-01-02 00:26:54','2021-06-17 11:20:04');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('pharetra',85963,6,7527,3,'2021-05-06 05:33:47','2021-11-03 23:38:20');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('tristique',19467,10,2866,1,'2021-01-12 18:58:12','2020-04-12 02:04:07');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('lobortis',28512,6,459,2,'2020-05-23 16:15:00','2020-04-30 21:25:09');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('Etiam',64165,3,444,1,'2020-06-03 09:16:55','2021-07-18 22:40:24');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('Nunc',47619,8,4824,5,'2020-08-10 04:57:02','2021-07-21 13:11:41');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('vel,',25031,8,4516,5,'2022-02-12 20:26:48','2022-01-21 21:59:12');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('mauris',66830,10,2227,2,'2020-09-04 12:06:25','2020-06-01 16:09:28');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('Duis',10923,3,42,7,'2021-11-18 09:21:50','2022-02-06 22:52:08');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('volutpat.',94925,3,2226,2,'2020-06-21 05:38:29','2020-08-01 19:29:17');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('quis',62559,5,978,7,'2022-01-18 08:20:51','2020-12-12 15:10:17');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('ligula.',17044,10,1116,8,'2020-09-06 16:13:24','2021-07-14 11:20:08');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('ligula',25463,6,2431,9,'2020-06-13 00:40:18','2021-10-13 03:48:14');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('tincidunt.',54698,5,9567,8,'2021-02-14 20:38:51','2021-01-25 04:18:42');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('amet',58490,3,31,7,'2021-09-11 22:01:43','2021-12-01 10:12:56');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('massa.',70750,3,9881,1,'2021-11-08 15:57:22','2021-12-14 17:35:37');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('facilisis',24494,1,8571,1,'2020-12-15 16:36:42','2021-03-09 20:47:09');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('ante',31808,5,9315,2,'2020-11-14 23:04:12','2022-03-13 21:04:06');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('magnis',31693,7,7469,6,'2021-10-04 09:48:44','2021-07-08 20:08:32');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('velit.',95354,7,6389,4,'2020-11-25 15:30:43','2021-10-08 23:34:23');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('tincidunt',61316,1,9820,3,'2021-09-21 04:21:45','2020-09-26 08:14:03');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('consectetuer',15214,3,2182,4,'2021-08-29 10:53:26','2020-07-13 14:03:54');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('euismod',95732,4,9844,2,'2021-03-25 14:52:06','2021-08-06 02:11:45');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('auctor',40138,5,2607,3,'2020-05-27 11:43:53','2021-03-03 11:52:42');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('sed,',81429,1,6194,10,'2020-05-04 02:04:48','2020-07-28 01:28:58');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('velit',38058,9,7340,6,'2021-02-10 11:13:42','2020-04-17 15:05:57');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('Nunc',58251,8,9989,6,'2020-05-12 20:28:56','2021-09-02 14:43:44');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('erat',42673,10,1456,2,'2020-05-25 08:44:04','2021-06-23 05:32:17');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('Sed',52135,4,2815,1,'2021-06-19 04:11:02','2021-01-25 03:04:54');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('convallis,',19595,3,7008,5,'2021-04-25 21:40:25','2020-10-04 09:07:40');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('nec',4106,5,351,5,'2021-06-27 05:20:25','2020-11-16 14:45:59');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('vitae,',61900,10,8412,8,'2020-07-20 03:49:43','2020-09-02 05:42:33');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('sit',11026,6,9653,8,'2021-02-28 00:47:03','2021-03-16 09:11:52');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('non,',48300,8,3648,3,'2021-07-21 17:15:14','2021-01-03 18:19:36');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('aliquam',87363,2,3567,4,'2020-03-26 11:54:43','2020-06-24 05:59:56');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('nec',9172,8,1948,1,'2020-07-28 12:22:49','2020-07-15 14:08:58');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('dolor.',37442,3,7829,10,'2021-09-01 17:26:17','2021-10-31 11:44:43');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('faucibus',62042,8,7846,2,'2021-06-26 06:43:30','2021-06-13 06:50:01');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('vulputate,',99007,9,1362,4,'2020-11-29 17:17:21','2020-07-22 07:57:24');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('dui',76286,8,4129,1,'2022-03-18 17:01:15','2021-08-11 07:51:29');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('Fusce',23421,10,6548,8,'2021-11-17 08:23:31','2021-10-24 01:44:57');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('ornare,',99603,3,8592,8,'2021-09-23 08:27:07','2020-11-23 09:58:13');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('eros',90926,3,6394,6,'2022-01-21 06:07:57','2021-04-26 13:38:18');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('libero.',10379,3,7335,2,'2021-02-04 12:30:58','2021-11-29 15:58:11');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('malesuada',14676,10,6732,2,'2020-10-28 14:11:09','2021-12-05 06:07:39');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('elit',93738,5,3256,4,'2021-03-20 05:05:49','2020-06-09 03:40:32');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('quam.',45245,1,2585,4,'2020-08-20 14:13:53','2021-11-30 08:52:54');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('Aenean',41646,10,2021,4,'2020-12-26 17:12:47','2021-11-23 05:07:51');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('sagittis',97806,5,7941,8,'2020-10-10 18:51:48','2021-01-29 09:20:37');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('augue,',24722,10,3713,6,'2020-05-08 19:05:53','2022-02-27 16:13:48');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('nec',41169,1,2363,7,'2021-07-07 03:41:28','2021-08-29 06:54:10');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('dolor',86453,10,4998,3,'2021-09-28 15:50:48','2021-02-22 01:20:43');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('imperdiet',80339,5,401,2,'2021-08-24 19:57:51','2020-11-18 12:52:09');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('nisl',63963,7,3125,9,'2022-01-13 21:44:41','2021-08-19 21:37:39');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('nibh',82502,10,818,8,'2021-03-29 16:10:29','2021-06-15 01:21:10');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('vel',31530,1,2971,8,'2022-02-01 05:12:12','2021-12-23 23:05:52');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('Integer',93101,6,1794,7,'2020-10-05 15:49:59','2021-02-26 01:17:25');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('elit,',51314,1,3398,5,'2021-02-01 06:03:28','2020-12-02 19:23:41');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('et',14099,9,2931,7,'2020-06-14 02:19:00','2021-06-29 08:49:55');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('elementum,',84639,1,5391,5,'2020-09-17 15:56:31','2021-09-25 12:25:17');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('quis',93333,2,8904,7,'2021-05-20 02:29:23','2020-08-10 12:22:49');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('et,',93232,4,2380,3,'2021-08-30 10:43:21','2021-01-02 18:41:20');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('Vivamus',48331,6,2653,4,'2022-01-19 20:20:17','2020-08-18 21:02:27');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('vel',44482,9,1963,1,'2022-01-16 15:08:49','2022-01-29 01:20:18');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('neque',84024,4,286,3,'2022-02-14 18:40:31','2020-12-28 07:32:39');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('elit.',96480,5,2486,1,'2021-02-13 09:07:20','2020-07-11 07:27:52');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('consectetuer,',4091,5,7265,4,'2020-03-31 23:52:50','2021-04-18 16:56:46');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('mauris.',41668,8,5805,6,'2020-06-24 02:21:22','2022-03-21 16:32:23');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('eleifend',71090,9,331,6,'2021-07-23 11:51:59','2021-02-06 15:22:46');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('odio',26074,3,925,2,'2022-02-12 02:55:48','2020-11-23 13:46:09');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('felis',25679,2,4657,1,'2021-12-25 07:58:12','2020-03-27 09:29:34');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('ac',60889,2,4472,7,'2020-04-19 20:22:40','2020-06-02 08:14:33');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('convallis',88333,4,3884,2,'2020-05-24 02:13:46','2021-07-30 23:02:01');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('vestibulum',99402,3,7154,5,'2022-02-20 14:07:07','2020-03-26 08:47:13');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('eleifend',23768,2,8868,5,'2021-06-16 00:19:31','2021-09-28 08:09:24');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('sit',94594,7,1423,9,'2020-07-28 10:34:59','2020-09-19 00:05:05');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('sagittis',76393,10,1249,9,'2020-07-06 01:36:57','2020-08-21 09:06:50');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('imperdiet',88955,6,5327,8,'2022-02-23 09:36:02','2021-11-01 22:04:07');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('lectus',37639,8,284,5,'2021-09-08 02:43:57','2020-05-20 08:31:34');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('justo',81925,10,5490,9,'2021-03-11 06:59:27','2020-05-03 03:37:03');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('bibendum.',96664,6,6547,1,'2020-08-21 07:18:23','2021-07-25 20:14:54');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('Sed',95998,10,462,6,'2021-11-04 12:35:35','2021-06-10 06:47:53');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('ipsum',28690,10,5534,8,'2021-08-30 17:15:23','2021-10-03 14:25:08');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('aliquet',9028,4,2230,8,'2022-01-15 03:00:03','2022-01-06 04:54:15');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('congue',13556,5,6760,3,'2021-11-21 05:24:18','2021-08-16 10:01:44');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('nascetur',66873,9,4083,1,'2021-04-29 08:26:41','2022-03-03 02:05:28');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('ligula',94136,9,6614,2,'2020-10-02 03:29:53','2020-12-30 19:37:05');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('mi',95398,5,4976,10,'2021-01-01 12:40:56','2021-10-04 10:00:46');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('Sed',86254,9,7745,2,'2022-02-08 16:38:44','2020-08-24 15:04:54');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('nec',86042,8,5550,2,'2021-02-11 00:56:41','2021-04-25 19:43:20');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('Nunc',85617,7,1497,3,'2022-03-05 03:45:57','2021-06-09 06:55:16');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('aliquam',58995,5,3662,3,'2021-07-30 02:13:10','2021-09-01 02:05:51');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('dui',93086,2,3789,10,'2021-08-17 01:01:23','2021-04-30 21:38:52');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('tristique',58423,2,5942,5,'2020-11-12 04:50:12','2021-09-26 21:17:44');
-INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('magna',98208,9,1202,7,'2020-11-23 02:37:50','2022-03-23 09:45:03');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('feugiat',58773,4,7972,'2021-06-16 22:01:49','2021-09-03 22:11:19');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('adipiscing',51451,6,7761,'2021-11-14 04:57:01','2021-11-13 04:47:05');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('penatibus',88667,3,9575,'2021-02-28 06:25:29','2022-02-03 07:19:38');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('lectus',18594,6,3187,'2020-06-13 11:49:14','2020-10-27 13:49:40');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('sit',85786,7,8715,'2021-05-11 08:14:43','2022-01-01 10:45:06');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('neque.',46597,9,5137,'2020-12-09 04:42:39','2020-05-02 19:27:06');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('Fusce',10164,10,3836,'2022-03-20 22:16:41','2021-12-13 15:29:03');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('commodo',38096,10,8629,'2020-07-27 22:50:20','2021-06-22 15:40:46');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('dolor,',62868,9,5837,'2020-06-24 20:09:05','2020-04-24 06:08:55');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('lectus',94633,8,6990,'2020-12-05 20:10:59','2021-02-18 09:42:34');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('lobortis.',20548,6,3430,'2022-02-04 03:06:29','2021-08-22 14:52:32');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('neque.',76881,4,6676,'2021-04-08 11:41:48','2021-03-19 03:22:02');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('vulputate',7066,4,3289,'2021-03-11 19:10:03','2020-05-30 00:09:20');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('et',46112,4,9191,'2020-12-31 23:34:34','2021-11-26 05:09:25');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('faucibus.',98913,6,7550,'2021-03-01 02:46:22','2020-10-31 10:35:21');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('ipsum',36829,7,7876,'2021-06-23 09:15:49','2020-05-19 07:50:01');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('sed',25454,7,7221,'2020-09-07 12:00:35','2021-02-20 00:57:07');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('Aenean',72169,9,9090,'2020-09-22 17:12:13','2021-10-19 06:47:48');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('interdum',69991,8,122,'2022-02-21 00:09:38','2021-06-19 04:33:37');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('aliquam',29457,10,7784,'2020-06-30 14:24:26','2021-11-30 08:35:20');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('Morbi',54241,6,224,'2020-10-02 23:19:10','2022-02-19 00:00:49');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('magna.',15467,7,2623,'2020-05-18 05:33:39','2022-01-30 21:41:04');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('feugiat.',47734,8,1715,'2021-09-06 01:48:47','2021-09-12 23:01:53');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('viverra.',93598,7,6684,'2021-12-04 19:50:10','2022-03-23 23:31:45');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('ornare',90652,2,4445,'2021-04-13 22:00:34','2021-11-26 02:01:52');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('ultrices',24598,3,1772,'2020-11-03 16:08:00','2021-09-06 02:42:12');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('blandit',33713,4,3629,'2021-09-23 23:45:29','2021-01-28 08:46:29');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('dolor',62640,5,1459,'2021-03-15 16:32:15','2020-05-01 13:45:24');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('ultricies',88065,6,4452,'2021-09-24 05:12:07','2021-04-20 18:50:50');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('eget,',58779,7,7155,'2020-08-18 19:25:47','2021-09-11 06:16:20');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('rhoncus.',79699,1,8618,'2020-05-13 03:22:22','2021-12-28 22:31:03');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('mauris',12004,2,6839,'2020-12-20 14:27:57','2021-04-19 17:59:52');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('nascetur',26918,5,8898,'2020-11-24 22:58:51','2022-02-05 17:46:24');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('nec,',9622,9,665,'2020-04-23 09:08:55','2022-03-23 17:35:10');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('elit',96809,10,9100,'2020-08-13 16:34:04','2020-12-23 13:41:30');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('dictum',84342,10,7926,'2021-04-18 04:13:13','2021-02-11 17:20:20');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('erat,',9445,8,1746,'2021-08-18 21:09:55','2021-07-04 07:03:37');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('Aliquam',63514,8,2040,'2020-06-09 11:10:33','2021-01-05 11:53:03');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('accumsan',27098,10,2082,'2021-12-02 14:32:26','2021-05-15 05:35:45');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('sociis',60830,10,6230,'2020-12-19 00:36:57','2021-01-19 09:38:33');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('mi,',8262,2,724,'2021-04-03 15:27:52','2021-02-05 21:28:22');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('adipiscing',36089,5,4770,'2021-03-08 03:11:27','2021-11-19 01:15:12');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('ullamcorper.',57453,1,9022,'2021-04-05 10:56:47','2021-08-30 12:23:02');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('luctus',71396,8,9158,'2021-01-14 04:50:11','2021-02-16 03:58:01');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('varius',63257,5,8087,'2020-07-09 06:43:22','2021-03-01 04:03:00');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('leo,',84051,9,3345,'2020-10-12 11:54:10','2022-01-01 23:40:28');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('Nulla',25336,4,7699,'2020-05-06 05:52:35','2021-09-11 14:00:44');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('tincidunt',72261,2,4900,'2020-08-16 00:12:22','2022-01-19 17:24:06');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('vitae',13156,7,584,'2021-07-12 07:48:30','2020-11-22 13:21:44');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('velit',26331,4,5850,'2020-05-02 01:14:57','2020-09-02 09:02:20');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('feugiat',4526,5,3494,'2021-04-15 10:25:57','2021-09-08 02:42:32');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('neque',1366,9,8096,'2022-01-17 02:45:49','2020-05-07 05:32:33');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('Mauris',37395,7,1019,'2021-10-27 08:26:49','2021-10-24 12:46:58');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('enim,',74231,5,5866,'2020-10-02 09:15:57','2021-12-17 00:25:54');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('fringilla,',96660,8,9235,'2021-06-22 02:42:44','2021-09-15 00:42:02');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('arcu',56817,3,187,'2021-05-28 15:55:20','2021-05-09 21:00:49');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('quis',77511,5,4671,'2021-07-17 17:27:57','2020-08-08 23:45:51');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('dictum',7640,7,9850,'2021-04-25 13:56:47','2022-01-12 04:45:52');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('Suspendisse',21039,4,8141,'2020-07-13 14:48:55','2021-08-10 14:18:35');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('non',16866,7,5905,'2022-02-27 22:43:09','2020-06-28 19:51:47');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('dignissim',6453,9,1821,'2020-04-26 05:15:33','2022-01-10 07:11:22');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('nec',58907,9,3103,'2021-07-16 16:33:06','2020-05-27 15:56:53');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('adipiscing',35235,10,6436,'2020-11-10 20:28:16','2021-10-18 16:07:39');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('eu',68237,6,8618,'2020-09-17 05:20:02','2020-07-27 00:56:29');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('hendrerit',81331,1,7794,'2021-10-28 09:43:16','2021-07-17 21:46:52');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('egestas',45199,3,4520,'2020-08-15 23:37:06','2021-06-16 22:09:05');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('massa',85050,1,6017,'2020-04-16 18:04:32','2020-07-24 08:18:06');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('et,',69149,6,8358,'2021-05-14 09:08:21','2021-03-30 18:48:53');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('mollis.',31384,1,9060,'2021-12-04 10:58:16','2020-10-14 05:31:19');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('eu,',34877,4,1115,'2020-11-15 20:48:11','2020-07-01 10:14:38');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('nec',1088,6,7219,'2021-11-28 00:38:59','2021-08-14 16:00:11');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('in',66585,2,584,'2020-08-23 12:01:57','2020-07-15 10:20:49');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('arcu.',74932,4,2007,'2020-09-12 10:00:40','2021-06-23 02:27:39');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('nibh.',82986,1,8184,'2021-11-05 06:35:16','2021-06-22 02:57:24');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('diam',94940,3,9801,'2020-12-24 13:36:06','2020-03-27 02:56:05');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('Cras',84426,6,9530,'2020-08-14 06:49:40','2020-05-28 20:05:27');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('orci.',74515,1,4362,'2021-09-09 20:25:20','2021-10-26 17:05:22');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('convallis',66128,9,9301,'2021-10-16 14:39:10','2020-04-07 17:57:40');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('nulla.',77980,1,9118,'2020-10-19 18:43:47','2020-11-26 09:24:21');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('blandit',99266,7,5299,'2020-12-05 12:07:10','2020-09-05 18:18:34');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('enim.',26921,10,9096,'2021-01-23 04:40:37','2021-04-06 02:35:55');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('Nullam',86861,6,7056,'2021-04-27 10:58:01','2021-04-04 06:11:44');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('dolor',84488,1,3520,'2021-12-11 02:45:36','2020-08-30 11:01:17');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('nunc.',42398,10,6373,'2021-08-15 08:16:20','2020-10-21 10:41:34');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('eu',34243,5,1035,'2021-03-05 05:31:08','2022-01-27 12:46:56');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('Phasellus',40881,3,4,'2021-05-29 00:21:02','2021-02-16 03:45:14');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('vestibulum,',91746,1,6898,'2020-08-11 04:08:03','2020-08-23 21:20:15');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('Cras',48839,6,434,'2021-01-12 04:23:16','2020-10-31 10:17:08');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('tincidunt',97106,3,9955,'2021-09-27 14:17:28','2021-12-27 06:45:56');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('libero.',22718,9,992,'2020-04-27 22:20:14','2021-07-19 05:32:26');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('placerat,',5437,1,8417,'2020-05-24 22:14:41','2021-08-03 08:56:58');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('interdum.',75851,6,8627,'2021-12-10 10:43:21','2020-04-25 23:35:54');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('congue',58127,8,999,'2022-03-05 21:43:53','2020-08-05 02:01:50');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('dictum',11726,4,6632,'2020-12-16 12:40:50','2020-10-29 15:47:44');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('nec',91956,2,9914,'2020-08-20 19:02:38','2021-11-29 17:46:06');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('ac,',35940,1,3796,'2022-02-15 14:15:12','2021-09-19 18:47:22');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('Nunc',19025,5,3037,'2021-11-11 18:35:10','2021-06-05 20:14:39');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('Donec',31558,7,7958,'2022-01-11 04:06:36','2021-05-20 01:03:30');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('odio',5564,10,3887,'2021-08-02 21:18:51','2020-09-01 21:09:01');
+INSERT INTO "products" (name,price,category_id,stock_number,created_on,updated_on) VALUES ('magna.',83866,1,2064,'2022-02-26 03:30:33','2021-10-05 20:42:31');
