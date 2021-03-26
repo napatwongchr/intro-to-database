@@ -134,5 +134,3 @@ DELETE FROM posts WHERE post_id = 2;
 ```
 
 <br><hr><br>
-
-## Exercises 🏅
