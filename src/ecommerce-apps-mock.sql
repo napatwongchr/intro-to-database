@@ -26,10 +26,6 @@ CREATE TABLE products (
   price INTEGER NOT NULL,
   category_id INTEGER NOT NULL,
   stock_number INTEGER NOT NULL,
-<<<<<<< HEAD
-=======
-  category_id INTEGER NOT NULL,
->>>>>>> f0eee1275807aa92f5de114167d3f58829d31716
   created_on TIMESTAMP NOT NULL,
   updated_on TIMESTAMP NOT NULL
 );
@@ -71,11 +67,7 @@ CREATE TABLE order_items (
   order_id INTEGER NOT NULL,
   product_id INTEGER NOT NULL,
   quantity INTEGER NOT NULL,
-<<<<<<< HEAD
   created_on TIMESTAMP NOT NULL
-=======
-  created_on TIMESTAMP NOT NULL,
->>>>>>> f0eee1275807aa92f5de114167d3f58829d31716
 );
 
 
@@ -128,11 +120,8 @@ INSERT INTO "users" (email,password,created_on,updated_on,last_logged_in) VALUES
 INSERT INTO "users" (email,password,created_on,updated_on,last_logged_in) VALUES ('eu@metus.ca','YEF32WSW8YR','2022-01-16 16:30:10','2020-12-08 12:13:20','2021-11-21 08:54:50');
 INSERT INTO "users" (email,password,created_on,updated_on,last_logged_in) VALUES ('lobortis@fermentum.edu','FHI69NGW0WC','2022-03-04 04:11:44','2021-05-03 18:47:17','2021-07-02 00:07:33');
 INSERT INTO "users" (email,password,created_on,updated_on,last_logged_in) VALUES ('volutpat@duinec.net','BWL80OQE7CJ','2020-12-14 09:40:18','2022-03-16 11:35:39','2021-08-07 01:13:37');
-<<<<<<< HEAD
 INSERT INTO "users" (email,password,created_on,updated_on,last_logged_in) VALUES ('js@world.edu','IXI69ZGW0AC','2022-03-04 04:11:44','2021-05-03 18:47:17','2021-07-02 00:07:33');
 INSERT INTO "users" (email,password,created_on,updated_on,last_logged_in) VALUES ('ama@zir.net','TSL156KZ7cx','2020-12-14 09:40:18','2022-03-16 11:35:39','2021-08-07 01:13:37');
-=======
->>>>>>> f0eee1275807aa92f5de114167d3f58829d31716
 
 -- customers data
 INSERT INTO "customers" (user_id,phone_number,firstname,lastname) VALUES (39,'002-606-2002','Kylan','Johnston');
