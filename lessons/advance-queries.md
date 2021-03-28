@@ -1,6 +1,10 @@
 # Advance SQL Queries
 
-ในส่วนนี้เราจะมาลองฝึก Query ข้อมูลจากหลาย ๆ ตารางกัน ซึ่งตารางของเรามีทั้งหมด 3 ตาราง แต่ละตารางมี schema ตามนี้
+ในส่วนนี้เราจะมาลองฝึก Query ข้อมูลจากหลาย ๆ ตารางกัน
+
+ให้เราไป Copy คำสั่งจาก [ที่นี่](https://github.com/napatwongchr/intro-to-database/blob/main/src/blog-apps-mock.sql) มาวางใน pgAdmin 4 query tool แล้วกด play เราจะได้ตาราง และข้อมูลในตาราง
+
+ซึ่งตารางของเรามีทั้งหมด 3 ตาราง แต่ละตารางมี schema ตามนี้
 
 ```sql
 CREATE TABLE users (
