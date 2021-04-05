@@ -1,6 +1,47 @@
 # Ecommerce Queries Exercise
 
-**Orders Problems**
+## Customer Problems
+
+1. อยากได้ข้อมูลที่อยู่ของ customer ที่ชื่อว่า 'Ifeoma'
+
+```sql
+select customers.customer_id, customers.firstname, customers.user_id, address_id, district, postal, street
+from addresses
+inner join customers
+on addresses.customer_id = customers.customer_id
+where customers.firstname = 'Ifeoma';
+```
+
+2. Update firstname ของ ลูกค้า ทีมี `customer_id = 2`
+
+```sql
+
+```
+
+3. Register ลูกค้าใหม่ ที่มีข้อมูลตามนี้
+   - phone_number: 0421112222
+   - firstname: Jimmy
+   - lastname: Doe
+
+```sql
+
+```
+
+## Categories Problems
+
+1. ดึงข้อมูล Categories name ออกมาทั้งหมด
+
+```sql
+
+```
+
+2. นับ Categories ทั้งหมดในระบบ
+
+```sql
+
+```
+
+## Orders Problems
 
 1. อยากรู้จำนวน order ของ customer ที่ชื่อ 'Maia' ในช่วง '2020-05-01' ถึง '2020-10-01'
 
@@ -56,7 +97,19 @@ limit 5;
 
 ## Products Problems
 
-1. อยากได้ข้อมูลสิ้นค้าขายดีที่สุด 10 อันดับแรก
+1. อยากได้ราคา และจำนวน Stock ของ ของ Product ที่ชื่อ `feugiat`
+
+```sql
+
+```
+
+2. ให้ Update Stock ของ feugiat เหลือ 6000 ชิ้น
+
+```sql
+
+```
+
+3. อยากได้ข้อมูลสิ้นค้าขายดีที่สุด 10 อันดับแรก
 
 ```sql
 select count(*) as product_count, products.product_id, products.name
@@ -68,7 +121,7 @@ order by product_count desc
 limit 10;
 ```
 
-2. อยากได้จำนวนสินค้าทั้งหมดในแต่ละหมวดหมู่ เรียงจากมากไปน้อย
+4. อยากได้จำนวนสินค้าทั้งหมดในแต่ละหมวดหมู่ เรียงจากมากไปน้อย
 
 ```sql
 select count(*) as product_count, categories.name
@@ -80,7 +133,7 @@ order by product_count desc
 limit 10;
 ```
 
-3. อยากได้จำนวนยอดขายของสินค้าที่มีชื่อว่า 'ipsum'
+5. อยากได้จำนวนยอดขายของสินค้าที่มีชื่อว่า 'ipsum'
 
 ```sql
 select products.product_id, products.name, count(products.product_id) as product_count
@@ -91,7 +144,7 @@ where products.name = 'ipsum'
 group by products.product_id;
 ```
 
-4. อยากได้จำนวนสินค้าใน stock ของสินค้าที่มีชื่อว่า 'ipsum'
+6. อยากได้จำนวนสินค้าใน stock ของสินค้าที่มีชื่อว่า 'ipsum'
 
 ```sql
 select name, stock_number
@@ -99,7 +152,7 @@ from products
 where name = 'ipsum';
 ```
 
-5. อยากได้ข้อมูลสินค้าที่มีราคาตั้งแต่ 100 - 2000 บาท เรียงจากถูกสุดไปแพงที่สุด
+7. อยากได้ข้อมูลสินค้าที่มีราคาตั้งแต่ 100 - 2000 บาท เรียงจากถูกสุดไปแพงที่สุด
 
 ```sql
 select name, price
@@ -110,15 +163,3 @@ order by price asc;
 ```
 
 <br><hr><br>
-
-## Customer Problems
-
-1. อยากได้ข้อมูลที่อยู่ของ customer ที่ชื่อว่า 'Ifeoma'
-
-```sql
-select customers.customer_id, customers.firstname, customers.user_id, address_id, district, postal, street
-from addresses
-inner join customers
-on addresses.customer_id = customers.customer_id
-where customers.firstname = 'Ifeoma';
-```

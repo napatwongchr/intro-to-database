@@ -198,3 +198,5 @@ ORDER BY comment_count DESC;
 ### ERD
 
 ![ecommerce-erd](./images/ecommerce-erd-1.png)
+
+[เฉลย](./ecommerce-queries-exercises.md)
