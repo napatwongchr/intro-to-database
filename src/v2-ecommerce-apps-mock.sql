@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS users, comments, posts, user_profile, products, products_categories, categories, orders, order_items, address, carts, carts_products CASCADE;
+DROP TABLE IF EXISTS users, comments, posts, user_profile, products, products_categories, categories, orders, order_items, addresses, carts, carts_products CASCADE;
 
 create table users (
   user_id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
@@ -141,8 +141,8 @@ create table orders (
   order_id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   user_id INT REFERENCES users(user_id) ON DELETE CASCADE,
 	status VARCHAR(8),
-	created_at DATE,
-	updated_at DATE
+	created_at TIMESTAMPTZ,
+	updated_at TIMESTAMPTZ
 );
 insert into orders (user_id, status, created_at, updated_at) values (5, 'pending', '2021-12-06T07:28:55Z', '2022-01-19T00:41:52Z');
 insert into orders (user_id, status, created_at, updated_at) values (3, 'pending', '2021-05-10T19:32:46Z', '2021-05-16T00:00:50Z');
@@ -552,7 +552,7 @@ insert into order_items (order_id, product_id, quantity) values (13, 6, 650);
 insert into order_items (order_id, product_id, quantity) values (60, 8, 514);
 insert into order_items (order_id, product_id, quantity) values (48, 12, 915);
 
-create table address (
+create table addresses (
   address_id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   user_id INT REFERENCES users(user_id) ON DELETE CASCADE,
 	street VARCHAR(50),
@@ -561,21 +561,21 @@ create table address (
 	sub_district TEXT,
 	zip_code VARCHAR(50)
 );
-insert into address (user_id, street, house_number, district, sub_district, zip_code) values (5, '4', 54, 'Sintenis'' Spike-rush', 'curae mauris viverra diam', null);
-insert into address (user_id, street, house_number, district, sub_district, zip_code) values (1, '1114', 60, 'Narrowleaf Bedstraw', 'curae duis', null);
-insert into address (user_id, street, house_number, district, sub_district, zip_code) values (9, '8387', 17, 'Broadbeard Beardtongue', 'nulla eget', 'R2J');
-insert into address (user_id, street, house_number, district, sub_district, zip_code) values (7, '194', 91, 'Lane Mountain Milkvetch', 'nec sem duis', '4980-782');
-insert into address (user_id, street, house_number, district, sub_district, zip_code) values (6, '9622', 16, 'Disc Lichen', 'enim in', '8104');
-insert into address (user_id, street, house_number, district, sub_district, zip_code) values (5, '315', 51, 'Fineleaf Pondweed', 'accumsan tellus nisi', 'H7V');
-insert into address (user_id, street, house_number, district, sub_district, zip_code) values (5, '381', 33, 'Brittleleaf Manzanita', 'maecenas tristique', '34280');
-insert into address (user_id, street, house_number, district, sub_district, zip_code) values (9, '3492', 9, 'Apachebush', 'consequat', '368380');
-insert into address (user_id, street, house_number, district, sub_district, zip_code) values (9, '61', 62, 'Texas Pinkroot', 'ut', null);
-insert into address (user_id, street, house_number, district, sub_district, zip_code) values (5, '11', 4, 'Furniss''s Phacelia', 'morbi', '6417');
-insert into address (user_id, street, house_number, district, sub_district, zip_code) values (6, '05', 23, 'Kuroiwa Grass', 'in leo maecenas', null);
-insert into address (user_id, street, house_number, district, sub_district, zip_code) values (1, '0050', 36, 'Ovate Tetrodontium Moss', 'vel', '58000-000');
-insert into address (user_id, street, house_number, district, sub_district, zip_code) values (7, '717', 7, 'Clustered Fescue', 'sollicitudin ut', null);
-insert into address (user_id, street, house_number, district, sub_district, zip_code) values (5, '051', 41, 'Rockyplains Dwarf Morning-glory', 'elementum ligula vehicula consequat', '11830');
-insert into address (user_id, street, house_number, district, sub_district, zip_code) values (6, '287', 36, 'Yerba De Cabra', 'ipsum aliquam non mauris', '4513');
+insert into addresses (user_id, street, house_number, district, sub_district, zip_code) values (5, '4', 54, 'Sintenis'' Spike-rush', 'curae mauris viverra diam', null);
+insert into addresses (user_id, street, house_number, district, sub_district, zip_code) values (1, '1114', 60, 'Narrowleaf Bedstraw', 'curae duis', null);
+insert into addresses (user_id, street, house_number, district, sub_district, zip_code) values (9, '8387', 17, 'Broadbeard Beardtongue', 'nulla eget', 'R2J');
+insert into addresses (user_id, street, house_number, district, sub_district, zip_code) values (7, '194', 91, 'Lane Mountain Milkvetch', 'nec sem duis', '4980-782');
+insert into addresses (user_id, street, house_number, district, sub_district, zip_code) values (6, '9622', 16, 'Disc Lichen', 'enim in', '8104');
+insert into addresses (user_id, street, house_number, district, sub_district, zip_code) values (5, '315', 51, 'Fineleaf Pondweed', 'accumsan tellus nisi', 'H7V');
+insert into addresses (user_id, street, house_number, district, sub_district, zip_code) values (5, '381', 33, 'Brittleleaf Manzanita', 'maecenas tristique', '34280');
+insert into addresses (user_id, street, house_number, district, sub_district, zip_code) values (9, '3492', 9, 'Apachebush', 'consequat', '368380');
+insert into addresses (user_id, street, house_number, district, sub_district, zip_code) values (9, '61', 62, 'Texas Pinkroot', 'ut', null);
+insert into addresses (user_id, street, house_number, district, sub_district, zip_code) values (5, '11', 4, 'Furniss''s Phacelia', 'morbi', '6417');
+insert into addresses (user_id, street, house_number, district, sub_district, zip_code) values (6, '05', 23, 'Kuroiwa Grass', 'in leo maecenas', null);
+insert into addresses (user_id, street, house_number, district, sub_district, zip_code) values (1, '0050', 36, 'Ovate Tetrodontium Moss', 'vel', '58000-000');
+insert into addresses (user_id, street, house_number, district, sub_district, zip_code) values (7, '717', 7, 'Clustered Fescue', 'sollicitudin ut', null);
+insert into addresses (user_id, street, house_number, district, sub_district, zip_code) values (5, '051', 41, 'Rockyplains Dwarf Morning-glory', 'elementum ligula vehicula consequat', '11830');
+insert into addresses (user_id, street, house_number, district, sub_district, zip_code) values (6, '287', 36, 'Yerba De Cabra', 'ipsum aliquam non mauris', '4513');
 
 
 create table carts (
