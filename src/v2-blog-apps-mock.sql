@@ -21,7 +21,7 @@ CREATE TABLE posts (
 	status TEXT NOT NULL,
   created_at TIMESTAMPTZ NOT NULL,
   updated_at TIMESTAMPTZ NOT NULL,
-  published_at TIMESTAMPTZ NOT NULL
+  published_at TIMESTAMPTZ
 );
 
 create table comments (
