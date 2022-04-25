@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS users, comments, posts, user_profile, products, products_categories, categories, orders, order_items, addresses, carts, carts_products CASCADE;
+DROP TABLE IF EXISTS users, user_profile, products, products_categories, categories, orders, order_items, addresses, carts, carts_products CASCADE;
 
 create table users (
   user_id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,

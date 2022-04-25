@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS users, comments, posts;
+DROP TABLE IF EXISTS users, comments, posts CASCADE;
 
 CREATE TABLE users (
   user_id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
